@@ -10,6 +10,14 @@ This component provides a simple and reusable wrapper that you can use to wrap a
 
 # Usage
 
+Add to project.clj
+
+```
+[reagent-catch "0.1.0-SNAPSHOT"]
+```
+
+Wrap components tree with `[rc/catch ...]`:
+
 ```
 (ns reagent-catch.example
   (:require [reagent-catch.core :as rc]
