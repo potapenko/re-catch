@@ -15,7 +15,7 @@ This component provides a simple and reusable wrapper that you can use to wrap a
 Add to project.clj
 
 ```
-[reagent-catch "0.1.0-SNAPSHOT"]
+[reagent-catch "0.1.0"]
 ```
 
 Wrap components tree with `[rc/catch ...]`:
