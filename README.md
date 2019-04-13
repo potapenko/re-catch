@@ -1,39 +1,36 @@
 # reagent-catch
 
-FIXME: Write a one-line description of your library/project.
+**A simple, reusable Reagent error boundary component for Ragegent 0.8.0+ and React 16+.**
 
-## Overview
+[![Clojars Project](https://img.shields.io/clojars/v/reagent-catch.svg)](https://clojars.org/reagent-catch)
 
-FIXME: Write a paragraph about the library/project and highlight its goals.
+React [v16](https://reactjs.org/blog/2017/09/26/react-v16.0.html) introduced the concept of [“error boundaries”](https://reactjs.org/docs/error-boundaries.html).
 
-## Setup
+This component provides a simple and reusable wrapper that you can use to wrap around your components. Any rendering errors in your components hierarchy can then be gracefully handled.
 
-To get an interactive development environment run:
+# Usage
 
-    lein figwheel
+```
+(ns reagent-catch.example
+  (:require [reagent-catch.core :as rc]
+            [reagent.core :as r]))
 
-and open your browser at [localhost:3449](http://localhost:3449/).
-This will auto compile and send all changes to the browser without the
-need to reload. After the compilation process is complete, you will
-get a Browser Connected REPL. An easy way to try it is:
+(defn line [num]
+  (if-not (= num 3)
+    [:h3  "line" (str num)]
+    [:h3 (-> js/nil .helloNil)]))
 
-    (js/alert "Am I connected?")
+(defn line-safe [num]
+  [rc/catch
+   [line num]])
 
-and you should see an alert in the browser window.
+(defn main-panel []
+  (fn []
+   [:div.p-4
+    [line-safe 1]
+    [line-safe 2]
+    [line-safe 3]
+    [line-safe 4]
+    [line-safe 5]]))
+```
 
-To clean all compiled files:
-
-    lein clean
-
-To create a production build run:
-
-    lein do clean, cljsbuild once min
-
-And open your browser in `resources/public/index.html`. You will not
-get live reloading, nor a REPL. 
-
-## License
-
-Copyright © 2014 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
