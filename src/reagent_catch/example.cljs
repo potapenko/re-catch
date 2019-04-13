@@ -4,11 +4,11 @@
 
 (defn line [num]
   (if-not (= num 3)
-    [:h1 (str num) " line"]
-    [:h1 (-> js/nil .helloNil)]))
+    [:h3  "line" (str num)]
+    [:h3 (-> js/nil .helloNil)]))
 
 (defn line-safe [num]
-  [rc/catch {:show-stack? false}
+  [rc/catch
    [line num]])
 
 (defn main-panel []
