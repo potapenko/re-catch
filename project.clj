@@ -1,4 +1,4 @@
-(defproject reagent-catch "0.1.0"
+(defproject reagent-catch "0.1.0-SNAPSHOT"
   :description "FIXME: write this!"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
@@ -42,5 +42,5 @@
                                   [reagent "0.8.1"]]
                    :source-paths ["src" "dev"]
                    :repl-options {:nrepl-middleware [cider.piggieback/wrap-cljs-repl]}
-                   :clean-targets ^{:protect ,qalse} ["resources/public/js/compiled"
+                   :clean-targets ^{:protect false} ["resources/public/js/compiled"
                                                      :target-path]}})
