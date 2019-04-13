@@ -44,3 +44,11 @@ Wrap components tree with `[rc/catch ...]`:
     [line-safe 5]]))
 ```
 
+## License
+
+License
+
+Copyright © 2019 Eugene Potapenko
+
+Distributed under the Eclipse Public License, the same as Clojure.
+
