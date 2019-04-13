@@ -8,6 +8,8 @@ React [v16](https://reactjs.org/blog/2017/09/26/react-v16.0.html) introduced the
 
 This component provides a simple and reusable wrapper that you can use to wrap around your components. Any rendering errors in your components hierarchy can then be gracefully handled.
 
+![](https://raw.githubusercontent.com/potapenko/reagent-catch/master/resources/images/catch-example.png)
+
 # Usage
 
 Add to project.clj
