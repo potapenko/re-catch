@@ -13,7 +13,7 @@ This component provides a simple and reusable wrapper that you can use to wrap a
 
 ## Restrictions
 
-Error boundaried catch only error on render phase.
+Error boundaried catch only error on rendering phase.
 
 Error boundaries do not catch errors for:
 
