@@ -19,8 +19,6 @@ Error boundaries do not catch errors for:
 
 * Event handlers
 * Asynchronous code
-* Errors thrown in the error boundary itself (rather than its children)
-
 
 
 ## Usage
