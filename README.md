@@ -1,6 +1,6 @@
 # reagent-catch
 
-**A simple, reusable Reagent error boundary component for Reagent 0.8.1+ and React 16+.**
+**A simple, reusable Reagent error boundary component for Reagent 0.8.1+ (React 16+).**
 
 [![Clojars Project](https://img.shields.io/clojars/v/reagent-catch.svg)](https://clojars.org/reagent-catch)
 
