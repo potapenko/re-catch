@@ -13,12 +13,15 @@ This component provides a simple and reusable wrapper that you can use to wrap a
 
 ### Note
 
+Error boundaried catch only error on render phase.
+
 Error boundaries do not catch errors for:
 
-* Event handlers (learn more)
-* Asynchronous code (e.g. setTimeout or requestAnimationFrame callbacks)
-* Server side rendering
+* Event handlers
+* Asynchronous code
 * Errors thrown in the error boundary itself (rather than its children)
+
+
 
 ## Usage
 
