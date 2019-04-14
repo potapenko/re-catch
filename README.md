@@ -39,7 +39,7 @@ Wrap components tree with `[rc/catch ...]`:
    [:div.p-4
     [line-safe 1]
     [line-safe 2]
-    [line-safe 3]
+    [line-safe 3] ;; error thrown
     [line-safe 4]
     [line-safe 5]]))
 ```
