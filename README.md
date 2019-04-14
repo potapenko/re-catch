@@ -10,6 +10,16 @@ This component provides a simple and reusable wrapper that you can use to wrap a
 
 ![](https://raw.githubusercontent.com/potapenko/reagent-catch/master/resources/images/catch-example.png)
 
+
+### Note
+
+Error boundaries do not catch errors for:
+
+* Event handlers (learn more)
+* Asynchronous code (e.g. setTimeout or requestAnimationFrame callbacks)
+* Server side rendering
+* Errors thrown in the error boundary itself (rather than its children)
+
 ## Usage
 
 Add to project.clj
