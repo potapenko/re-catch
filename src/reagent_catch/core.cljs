@@ -10,7 +10,7 @@
       (fn [this error info]
         (reset! error-state (let [max-error-lenght 200]
                               (when-let [err (str error)]
-                                (if (-> err count < max-error-lenght)
+                                (if (-> err count (< max-error-lenght))
                                   (-> err
                                       (subs 0 max-error-lenght)
                                       (str " ..."))))))

@@ -26,7 +26,7 @@ Error boundaries do not catch errors for:
 Add to project.clj
 
 ```
-[reagent-catch "0.1.1"]
+[reagent-catch "0.1.2"]
 ```
 
 Wrap components tree with `[rc/catch ...]`:

@@ -1,4 +1,4 @@
-(defproject reagent-catch "0.1.1"
+(defproject reagent-catch "0.1.2"
   :description "FIXME: write this!"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
