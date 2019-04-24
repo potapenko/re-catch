@@ -1,5 +1,5 @@
-(ns reagent-catch.example
-  (:require [reagent-catch.core :as rc]
+(ns re-catch.example
+  (:require [re-catch.core :as rc]
             [reagent.core :as r]))
 
 (defn line [num]

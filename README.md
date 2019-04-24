@@ -2,13 +2,13 @@
 
 **A simple, reusable Reagent error boundary component for Reagent 0.8.1+ (React 16+).**
 
-[![Clojars Project](https://img.shields.io/clojars/v/reagent-catch.svg)](https://clojars.org/reagent-catch)
+[![Clojars Project](https://img.shields.io/clojars/v/re-catch.svg)](https://clojars.org/re-catch)
 
 React [v16](https://reactjs.org/blog/2017/09/26/react-v16.0.html) introduced the concept of [“error boundaries”](https://reactjs.org/docs/error-boundaries.html).
 
 This component provides a simple and reusable wrapper that you can use to wrap around your components. Any rendering errors in your components hierarchy can then be gracefully handled.
 
-![](https://raw.githubusercontent.com/potapenko/reagent-catch/master/resources/images/catch-example.png)
+![](https://raw.githubusercontent.com/potapenko/re-catch/master/resources/images/catch-example.png)
 
 
 ## Restrictions
