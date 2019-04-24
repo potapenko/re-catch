@@ -1,4 +1,4 @@
-(ns reagent-catch.core
+(ns re-catch.core
   (:require  [reagent.core :as r]
              [clojure.string :as string]))
 
