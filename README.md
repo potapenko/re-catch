@@ -26,7 +26,7 @@ Error boundaries do not catch errors for:
 Add to project.clj
 
 ```
-[re-catch "0.1.2"]
+[re-catch "0.1.3"]
 ```
 
 Wrap components tree with `[rc/catch ...]`:
