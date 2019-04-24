@@ -1,4 +1,4 @@
-# reagent-catch
+# re-catch
 
 **A simple, reusable Reagent error boundary component for Reagent 0.8.1+ (React 16+).**
 
@@ -26,14 +26,14 @@ Error boundaries do not catch errors for:
 Add to project.clj
 
 ```
-[reagent-catch "0.1.2"]
+[re-catch "0.1.2"]
 ```
 
 Wrap components tree with `[rc/catch ...]`:
 
 ```
-(ns reagent-catch.example
-  (:require [reagent-catch.core :as rc]
+(ns re-catch.example
+  (:require [re-catch.core :as rc]
             [reagent.core :as r]))
 
 (defn line [num]
