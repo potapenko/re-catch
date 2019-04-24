@@ -1,4 +1,4 @@
-(defproject re-catch "0.1.2"
+(defproject re-catch "0.1.3"
   :description "FIXME: write this!"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
@@ -15,10 +15,10 @@
               [{:id "dev"
                 :source-paths ["src"]
 
-                :figwheel {:on-jsload "reagent-catch.core/on-js-reload"
+                :figwheel {:on-jsload "re-catch.core/on-js-reload"
                            :open-urls ["http://localhost:3449/index.html"]}
 
-                :compiler {:main reagent-catch.example
+                :compiler {:main re-catch.example
                            :asset-path "js/compiled/out"
                            :output-to "resources/public/js/compiled/reagent_catch.js"
                            :output-dir "resources/public/js/compiled/out"
@@ -27,7 +27,7 @@
                {:id "min"
                 :source-paths ["src"]
                 :compiler {:output-to "resources/public/js/compiled/reagent_catch.js"
-                           :main reagent-catch.example
+                           :main re-catch.example
                            :optimizations :advanced
                            :pretty-print false}}]}
 

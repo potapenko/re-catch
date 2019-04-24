@@ -18,7 +18,7 @@
                                     .-componentStack
                                     (string/split-lines)
                                     (remove string/blank?)
-                                    (drop-while #(re-find #"reagent_catch" %))
+                                    (drop-while #(re-find #"G_|re_catch" %))
                                     (take 3)
                                     (string/join "\n"))))
       :reagent-render (fn [& body]
