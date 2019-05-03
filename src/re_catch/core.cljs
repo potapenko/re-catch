@@ -12,7 +12,8 @@
    [:pre info]])
 
 (defn catch [{:keys [render-error-component]
-              :or   {render-error-component render-error}}]
+              :or   {render-error-component render-error
+                     :as props}}]
   (let [error-state (r/atom nil)
         info-state  (r/atom nil)]
     (r/create-class
@@ -35,4 +36,7 @@
                         (if @error-state
                           [render-error-component
                            {:error @error-state :info @info-state}]
-                          (into [:<>] body)))})))
+                          (into [:<>] (if (and (-> body first map?)
+                                               (-> body first (= props)))
+                                        (rest body)
+                                        body))))})))
