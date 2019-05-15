@@ -2,7 +2,7 @@
   (:require  [reagent.core :as r]
              [clojure.string :as string]))
 
-(defn- render-error [{:keys [error info]}]
+(defn- render-error-component [{:keys [error info]}]
   [:div
    {:style {:width           "100%"
             :min-width       300
@@ -11,9 +11,9 @@
    [:h6 error]
    [:pre info]])
 
-(defn catch [{:keys [render-error-component]
-              :or   {render-error-component render-error
-                     :as props}}]
+(def ^:dynamic *render-error* render-error-component)
+
+(defn catch []
   (let [error-state (r/atom nil)
         info-state  (r/atom nil)]
     (r/create-class
@@ -34,9 +34,7 @@
                                     (string/join "\n"))))
       :reagent-render (fn [& body]
                         (if @error-state
-                          [render-error-component
+                          [*render-error*
                            {:error @error-state :info @info-state}]
-                          (into [:<>] (if (and (-> body first map?)
-                                               (-> body first (= props)))
-                                        (rest body)
-                                        body))))})))
+                          (when-not (->> body (remove nil?) empty?)
+                           (into [:<>] body))))})))

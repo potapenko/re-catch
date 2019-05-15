@@ -18,7 +18,8 @@
     [line-safe 2]
     [line-safe 3]
     [line-safe 4]
-    [line-safe 5]]))
+    [line-safe 5]
+    [rc/catch nil]]))
 
 (defn init! []
   (r/render [main-panel] (.getElementById js/document "app")))
