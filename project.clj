@@ -1,4 +1,4 @@
-(defproject re-catch "0.1.3"
+(defproject re-catch "0.1.4"
   :description "FIXME: write this!"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
